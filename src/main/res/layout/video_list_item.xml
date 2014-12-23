@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="180px"
+        android:layout_height="240px"
+        android:id="@+id/thumbnail"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.Large"
+            android:text="New Text"
+            android:id="@+id/video_title"
+            android:layout_gravity="left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/video_description"
+            android:layout_gravity="left"
+            android:layout_marginTop="2dp"
+            style="@android:style/TextAppearance.Holo.Small" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/networklogo"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

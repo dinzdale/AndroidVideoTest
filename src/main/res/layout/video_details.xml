@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:id="@+id/video_title"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:autoText="false"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:textSize="30dp"
+        android:textIsSelectable="false"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/art_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/video_title">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="180px"
+            android:layout_height="240px"
+            android:id="@+id/poster_art"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:focusableInTouchMode="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/network_id"
+                android:text="Network ID"
+                android:textSize="20dp"
+                android:textIsSelectable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/episodeInfo"
+                android:text="Episode"
+                android:textSize="15dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating"
+                android:text="Rating"
+                android:textSize="15dp"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/details_container"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/art_container"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="147px"
+            android:layout_height="106px"
+            android:id="@+id/entityImage"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_details_text"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+</RelativeLayout>
